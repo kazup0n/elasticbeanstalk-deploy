@@ -1,0 +1,21 @@
+{
+  "name": "elasticbeanstalk-deploy",
+  "version": "0.0.1",
+  "description": "tiny util for deploying application to elasticbeanstalk",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "jest",
+    "watch": "jest --watch"
+  },
+  "author": "kazuhiro sasaki<dusty.trombone@gmail.com>",
+  "license": "ISC",
+  "repositories": "https://github.com/kazup0n/elasticbeanstalk-deploy"
+  "dependencies": {
+    "aws-sdk": "^2.6.11",
+    "eyes": "^0.1.8",
+    "moment": "^2.15.1"
+  },
+  "devDependencies": {
+    "jest": "^16.0.2"
+  }
+}
