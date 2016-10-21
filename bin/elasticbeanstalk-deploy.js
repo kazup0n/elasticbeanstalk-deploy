@@ -1,10 +1,12 @@
+#!/usr/bin/env node
+
 const AWS = require('aws-sdk')
 const fs = require('fs')
 const moment = require('moment')
 
 // logger
 const logger = require('../logger')
-const createVersion = require('./appversion')
+const createVersion = require('../appversion')
 
 //clients
 const s3 = new AWS.S3()
@@ -31,7 +33,7 @@ function upload_to_s3(artifact, version){
 	logger.info(`Uploading new version: ${version} to ${S3_BUCKET}/${key}`)
 	return new Promise((resolve, reject) => s3.upload(params, (err, data) => {
 		if(err){
-			reject(er)
+			reject(err)
 		}else{
 			logger.info('upload done')
 			resolve(data)
